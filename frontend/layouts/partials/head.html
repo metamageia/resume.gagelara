@@ -1,0 +1,37 @@
+<head>
+  <title>{{ .Site.Params.title }}</title>
+
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
+
+  {{ $css := resources.Get "main.css" | css.TailwindCSS }}
+  {{ if hugo.IsProduction }}
+  {{ with $css | minify | fingerprint }}
+  <link
+    rel="stylesheet"
+    href="{{ .RelPermalink }}"
+    integrity="{{ .Data.Integrity }}"
+    crossorigin="anonymous"
+  />
+  {{ end }}
+  {{ else}}
+  <link href="{{ $css.RelPermalink }}" rel="stylesheet" />
+  {{ end }}
+
+  <script>
+    const toggleTheme = (el) => {
+      const html = document.querySelector("html");
+      if (el.classList.contains("bi-lightbulb-off-fill")) {
+        el.classList.remove("bi-lightbulb-off-fill");
+        el.classList.add("bi-lightbulb-on-fill");
+        html.classList.add("dark");
+      } else {
+        el.classList.remove("bi-lightbulb-on-fill");
+        el.classList.add("bi-lightbulb-off-fill");
+        html.classList.remove("dark");
+      }
+    };
+  </script>
+</head>

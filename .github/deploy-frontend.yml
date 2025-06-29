@@ -5,6 +5,7 @@ on:
   pull_request:
     branches: [ main ]
     paths: frontend/*
+  workflow_dispatch:
 
 env: 
   AWS_REGION: "us-east-2"
