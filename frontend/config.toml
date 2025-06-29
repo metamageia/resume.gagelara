@@ -23,7 +23,7 @@ disableKinds = ["taxonomy"]
 
         [[params.social.list]]
         icon = "bi bi-linkedin"
-        url = "#"
+        url = "https://www.linkedin.com/in/gage-lara/"
         title = "LinkedIn"
 
         [[params.social.list]]
