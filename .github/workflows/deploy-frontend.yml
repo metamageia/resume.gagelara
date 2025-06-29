@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build hugo:
+  build-hugo:
     runs-on: ubuntu-latest
     defaults:
       run:
