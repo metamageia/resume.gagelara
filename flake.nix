@@ -18,6 +18,7 @@
             pkgs.terraform
             pkgs.hugo
             pkgs.nodejs
+            pkgs.tailwindcss
           ];
           shellHook = ''
             echo "Welcome to the Cloud Resume Challenge development environment!"
