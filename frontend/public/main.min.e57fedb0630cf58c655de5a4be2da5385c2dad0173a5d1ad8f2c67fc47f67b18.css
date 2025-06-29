@@ -1,9 +1,4 @@
-/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@layer properties;
-@layer theme, base, components, utilities;
-@layer theme {
-  :root, :host {
+/*!tailwindcss v4.1.10 | MIT License | https://tailwindcss.com*/@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css";@layer properties;@layer theme,base,components,utilities;@layer theme{:root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -28,9 +23,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
-}
-@layer base {
-  *, ::after, ::before, ::backdrop, ::file-selector-button {
+}@layer base{*, ::after, ::before, ::backdrop, ::file-selector-button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -173,9 +166,7 @@
   [hidden]:where(:not([hidden="until-found"])) {
     display: none !important;
   }
-}
-@layer utilities {
-  .static {
+}@layer utilities{.static {
     position: static !important;
   }
   .m-1 {
@@ -894,92 +885,54 @@
       }
     }
   }
-}
-@layer components {
-  .prose code::before, .prose code::after {
+}@layer components{.prose code::before, .prose code::after {
     content: none !important;
   }
-}
-@property --tw-border-style {
-  syntax: "*";
+}@property --tw-border-style{syntax: "*";
   inherits: false;
   initial-value: solid;
-}
-@property --tw-font-weight {
-  syntax: "*";
+}@property --tw-font-weight{syntax: "*";
   inherits: false;
-}
-@property --tw-shadow {
-  syntax: "*";
+}@property --tw-shadow{syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-shadow-color {
-  syntax: "*";
+}@property --tw-shadow-color{syntax: "*";
   inherits: false;
-}
-@property --tw-shadow-alpha {
-  syntax: "<percentage>";
+}@property --tw-shadow-alpha{syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
-}
-@property --tw-inset-shadow {
-  syntax: "*";
+}@property --tw-inset-shadow{syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-inset-shadow-color {
-  syntax: "*";
+}@property --tw-inset-shadow-color{syntax: "*";
   inherits: false;
-}
-@property --tw-inset-shadow-alpha {
-  syntax: "<percentage>";
+}@property --tw-inset-shadow-alpha{syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
-}
-@property --tw-ring-color {
-  syntax: "*";
+}@property --tw-ring-color{syntax: "*";
   inherits: false;
-}
-@property --tw-ring-shadow {
-  syntax: "*";
+}@property --tw-ring-shadow{syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-inset-ring-color {
-  syntax: "*";
+}@property --tw-inset-ring-color{syntax: "*";
   inherits: false;
-}
-@property --tw-inset-ring-shadow {
-  syntax: "*";
+}@property --tw-inset-ring-shadow{syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-ring-inset {
-  syntax: "*";
+}@property --tw-ring-inset{syntax: "*";
   inherits: false;
-}
-@property --tw-ring-offset-width {
-  syntax: "<length>";
+}@property --tw-ring-offset-width{syntax: "<length>";
   inherits: false;
   initial-value: 0px;
-}
-@property --tw-ring-offset-color {
-  syntax: "*";
+}@property --tw-ring-offset-color{syntax: "*";
   inherits: false;
   initial-value: #fff;
-}
-@property --tw-ring-offset-shadow {
-  syntax: "*";
+}@property --tw-ring-offset-shadow{syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-duration {
-  syntax: "*";
+}@property --tw-duration{syntax: "*";
   inherits: false;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+}@layer properties{@supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
@@ -1001,4 +954,3 @@
     }
   }
 }
-

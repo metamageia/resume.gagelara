@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://gagelara.com"
 languageCode = "en-us"
 disableKinds = ["taxonomy"]
 
@@ -6,10 +6,10 @@ disableKinds = ["taxonomy"]
     writeStats = true
 
 [params]
-    title = "Sada Theme"
-    author = "Darshan Baral"
-    description = "Simple portfolio theme"
-    copyright = "TEst"
+    title = "Resume"
+    author = "Gage Lara"
+    description = "Welcome to my Cloud Resume"
+    copyright = "Check out my other links at:"
     theme = "dark" # `dark` or `light`
 
     # Profile section
@@ -31,114 +31,85 @@ disableKinds = ["taxonomy"]
         url = "https://github.com/metamageia"
         title = "GitHub"
 		
-		[[params.social.list]]
-        icon = "bi bi-mortarboard-fill"
-        url = "#"
-        title = "Google Scholar"
-
         [[params.social.list]]
         icon = "bi bi-envelope-at-fill"		
-        url = "#"
+        url = "gageallenlara@gmail.com"
         title = "Email"
-
-        [[params.social.list]]
-        icon = "bi bi-bluesky"
-        url = "#"
-        title = "Bluesky"
-
-    # Education section
-    [params.education]
-        title = "Education"
-
-        [[params.education.list]]
-        degree = "Masters in Degree 1"
-        college = "University Number 1"
-        dates = "2016 - 2018"
-        thesis_title = "Title of the dissertation"
-        thesis_link = "#"
-
-        [[params.education.list]]
-        degree = "Bachelors in Degree 2"
-        college = "University Number 2"
-        dates = "2010 - 2014"
-
-    # Languages section
-    [params.language]
-        title = "Languages"
-
-        [[params.language.list]]
-        language = "English"
-        level = "Fluent"
-				
-        [[params.language.list]]
-        language = "Bird"
-        level = "Basic"
 
     # Interests section
     [params.hobbies]
         title = "Hobbies"
 
         [[params.hobbies.list]]
-        interest = "Travelling"
+        interest = "Music Production"
 		
 		[[params.hobbies.list]]
-        interest = "Music"
+        interest = "TTRPGs"
 
         [[params.hobbies.list]]
-        interest = "Flying"
+        interest = "Firedancing"
 
         [[params.hobbies.list]]
-        interest = "Baking"
+        interest = "3D Printing"
+
+        [[params.hobbies.list]]
+        interest = "Philosophy"
 
     [params.aboutme]
-        description = "Tagline. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        description = "I’m an aspiring DevOps and Cloud engineer who loves turning complex ideas into satisfyingly efficient, automated, and declarative solutions. In addition to completing the Cloud Resume Challenge I’ve built and maintained a NixOS-powered cloud homelab, created interactive JavaScript tools for Tabletop RPGs, and designed streamlined CI/CD workflows for turning local markdown notes into fully built and deployed websites with a single click."
 
     # Experiences section
     [params.experiences]
-        title = "Experiences"
+        title = "Other Experiences"
 
         [[params.jobs.list]]
-        position = "Job Number 1"
-        dates = "2018 - *Present*"
-		link = "#"
-        company = "Company name 1"
+        position = "Inventory Management Specialist"
+        dates = "2018 - 2024"
+        company = "Pioneer Balloon"
 
         [[params.jobs.list]]
-        position = "Job Number 2"
-        dates = "2016 - 2018"
-		link = "#"
-        company = "Company name 2"
-        details = "Brief description of the `work` done. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        position = "Inventory Management Specialist"
+        dates = "2014 - 2017"
+        company = "Walmart"
 
     # Projects section
     [params.projects]
         title = "Projects"
 
         [[params.projects.list]]
-        title = "Awesome Project 1"
-        url = "#"
-        description = "Description of the *awesome* project 1"
+        title = "Obsidian to Quartz GitOps Tutorial"
+        url = "https://blog.gagelara.com/post/effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/"
+        description = "Developed a tutorial explaining how to build a streamlined GitOps pipeline for turning Obsidian markdown notes into Quartz static websites with a single click, with instructions on automatically building and deploying multiple websites simultaneously from within a single vault - both demonstrating and teaching effective CICD principles in a beginner-friendly fashion."
 		
 		[[params.projects.list]]
-        title = "Awesome Project 2"
-        url = "#"
-        description = "Description of the **awesome** project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        title = "NixOS Configuration"
+        url = "https://github.com/metamageia/NixOS-Personal"
+        description = "Published and maintain my personal NixOS Configuration in a GitHub repository demonstrating my understand of NixOS, Linux, and Declarative workflows."
+
+        [[params.projects.list]]
+        title = "Overlord: Javascript TTRPG Statblock Web App with PWA"
+        url = "https://github.com/metamageia/overlord"
+        description = "Overlord: A visual statblock library manager, creator, and editor for the Trespasser Tabletop RPG. This tool was made as a personal project for one of my favorite games while learning Javascript."
 
     # Skills section
     [params.skills]
         title = "Skills"
 
         [[params.skills.list]]
-        skill = "Skill 1, Skill 2"
+        skill = "NixOS"
         skillrating = 95 # out of 100
                 
         [[params.skills.list]]
-        skill = "Skill 3"
+        skill = "GitOps"
         skillrating = 90
 		
         [[params.skills.list]]
-        skill = "Skill 4"
+        skill = "Cloud: AWS & Digital Ocean"
         skillrating = 80
+
+        [[params.skills.list]]
+        skill = "Terraform"
+        skillrating = 70
 
 [deployment]
   [[deployment.targets]]
