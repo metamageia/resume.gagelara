@@ -28,7 +28,7 @@ disableKinds = ["taxonomy"]
 
         [[params.social.list]]
         icon = "bi bi-github"
-        url = "#"
+        url = "https://github.com/metamageia"
         title = "GitHub"
 		
 		[[params.social.list]]
