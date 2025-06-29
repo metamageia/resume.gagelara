@@ -14,8 +14,7 @@ disableKinds = ["taxonomy"]
 
     # Profile section
     [params.profile]
-        name = "First Last"
-        title = "Abbr., K.A."
+        name = "Gage Lara (Test)"
         photo = "images/profile.jpg"
 
     # Section for links to social websites
