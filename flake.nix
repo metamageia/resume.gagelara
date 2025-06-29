@@ -16,6 +16,7 @@
             pkgs.awscli2
             pkgs.terraform
             pkgs.hugo
+            pkgs.nodejs
           ];
           shellHook = ''
             echo "Welcome to the Cloud Resume Challenge development environment!"
