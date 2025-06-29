@@ -55,7 +55,7 @@ resource "aws_cloudfront_distribution" "resume_gagelara_distribution" {
   is_ipv6_enabled     = true
   http_version        = "http2"
   price_class         = "PriceClass_All"
-  default_root_object = "index.html"
+  default_root_object = "public/index.html"
   wait_for_deployment = true
   retain_on_delete    = false
 

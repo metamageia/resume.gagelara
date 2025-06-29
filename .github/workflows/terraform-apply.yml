@@ -11,6 +11,11 @@ env:
 permissions:
       id-token: write   
       contents: read    
+
+concurrency:
+  group: "infra"
+  cancel-in-progress: false
+
 jobs:
   Apply-Terraform-to-Poduction:
     runs-on: ubuntu-latest
@@ -25,7 +30,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1.7.0
 
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE }} #change to reflect your IAM role’s ARN
+          role-to-assume: ${{ secrets.AWS_ROLE }} 
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
 

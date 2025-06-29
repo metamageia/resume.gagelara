@@ -14,6 +14,7 @@
         devShells.default = pkgs.mkShell {
           buildInputs = [
             pkgs.awscli2
+            pkgs.act
             pkgs.terraform
             pkgs.hugo
             pkgs.nodejs
