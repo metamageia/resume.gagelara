@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
         run:
-            working-directory: ./prod
+            working-directory: infra/prod
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
