@@ -13,11 +13,10 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pkgs.awscli2
-            pkgs.act
+            pkgs.terraform
           ];
           shellHook = ''
-            echo "Welcome to the Cloud Resume Challenge development environment!"
+            echo "Welcome to the CRC Infra development environment!"
           '';
         };
       });
