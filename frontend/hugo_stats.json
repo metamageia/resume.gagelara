@@ -20,6 +20,7 @@
       "p",
       "script",
       "section",
+      "span",
       "title"
     ],
     "classes": [
@@ -104,6 +105,8 @@
       "w-4/5",
       "w-full"
     ],
-    "ids": null
+    "ids": [
+      "visitor-count"
+    ]
   }
 }
