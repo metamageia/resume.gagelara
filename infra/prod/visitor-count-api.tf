@@ -3,17 +3,17 @@ resource "aws_apigatewayv2_api" "vistor-count-api" {
   protocol_type = "HTTP"
 
   cors_configuration {
-    allow_origins = ["*"]        
-    allow_methods = ["GET"]      
-    allow_headers = ["*"]        
+    allow_origins = ["*"]
+    allow_methods = ["GET"]
+    allow_headers = ["*"]
   }
 }
 
 resource "aws_apigatewayv2_integration" "lambda_integration" {
-  api_id           = aws_apigatewayv2_api.vistor-count-api.id
-  integration_type = "AWS_PROXY"
-  integration_uri  = aws_lambda_function.visitor-counter-function.invoke_arn
-  integration_method = "POST"
+  api_id                 = aws_apigatewayv2_api.vistor-count-api.id
+  integration_type       = "AWS_PROXY"
+  integration_uri        = aws_lambda_function.visitor-counter-function.invoke_arn
+  integration_method     = "POST"
   payload_format_version = "2.0"
 }
 
@@ -38,6 +38,6 @@ resource "aws_lambda_permission" "apigw" {
 }
 
 output "api_gateway_url" {
-  value = aws_apigatewayv2_api.vistor-count-api.api_endpoint
+  value       = aws_apigatewayv2_api.vistor-count-api.api_endpoint
   description = "The invoke URL of the API Gateway"
 }
