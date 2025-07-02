@@ -8,7 +8,7 @@ disableKinds = ["taxonomy"]
 [params]
     title = "Resume"
     author = "Gage Lara"
-    description = "Welcome to my Cloud Resume"
+    description = "My Resume"
     copyright = "Check out my other links at:"
     theme = "dark" # `dark` or `light`
 
@@ -77,17 +77,22 @@ disableKinds = ["taxonomy"]
         title = "Projects"
 
         [[params.projects.list]]
-        title = "Obsidian to Quartz GitOps Tutorial"
+        title = "Cloud Resume Challenge (AWS, Terraform, GitOps)"
+        url = "https://github.com/metamageia/resume.gagelara"
+        description = "Completed the Cloud Resume Challenge by developing a serverless static resume website on AWS, fully provisioned with Terraform, featuring a custom API and a Python Lambda function that updates a DynamoDB table to track the total number of website visitors."
+		
+        [[params.projects.list]]
+        title = "Obsidian to Quartz GitOps Tutorial (GitOps)"
         url = "https://blog.gagelara.com/post/effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/"
         description = "Developed a tutorial explaining how to build a streamlined GitOps pipeline for turning Obsidian markdown notes into Quartz static websites with a single click, with instructions on automatically building and deploying multiple websites simultaneously from within a single vault - both demonstrating and teaching effective CICD principles in a beginner-friendly fashion."
 		
 		[[params.projects.list]]
-        title = "NixOS Configuration"
+        title = "NixOS Configuration (Nix, NixOS)"
         url = "https://github.com/metamageia/NixOS-Personal"
         description = "Published and maintain my personal NixOS Configuration in a GitHub repository demonstrating my understand of NixOS, Linux, and Declarative workflows."
 
         [[params.projects.list]]
-        title = "Overlord: Javascript TTRPG Statblock Web App with PWA"
+        title = "Overlord: Javascript TTRPG Statblock Web App with PWA (JS, HTML, CSS)"
         url = "https://github.com/metamageia/overlord"
         description = "Overlord: A visual statblock library manager, creator, and editor for the Trespasser Tabletop RPG. This tool was made as a personal project for one of my favorite games while learning Javascript."
 

@@ -646,6 +646,9 @@
   .flex {
     display: flex !important;
   }
+  .table {
+    display: table !important;
+  }
   .h-5 {
     height: calc(var(--spacing) * 5) !important;
   }
