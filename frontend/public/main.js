@@ -23,7 +23,6 @@ if (hasVisited()) {
   document.cookie = "visited=true; max-age=" + 60 * 60 * 24 * 365 + "; path=/";
 
   fetch(apiUrlIncrement)
-  fetch(apiUrlCount)
   .then(response => response.json())
   .then(data => {
     document.getElementById('visitor-count').innerText = data.count;

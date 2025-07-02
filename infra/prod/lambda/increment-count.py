@@ -20,6 +20,7 @@ def increment(event, context):
             "headers": {"Content-Type": "application/json"},
             "body": json.dumps({"error": str(e)})
         }
+    return get_count(event, context)
 
 def get_count(event, context):
     try:
