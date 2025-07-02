@@ -9,10 +9,24 @@ resource "aws_apigatewayv2_api" "vistor-count-api" {
   }
 }
 
-resource "aws_apigatewayv2_integration" "lambda_integration" {
+output "api_url" {
+  value       = aws_apigatewayv2_api.vistor-count-api.api_endpoint
+  description = "The invoke URL of the API Gateway"
+}
+
+resource "aws_apigatewayv2_stage" "default" {
+  api_id      = aws_apigatewayv2_api.vistor-count-api.id
+  name        = "$default"
+  auto_deploy = true
+}
+
+
+### Increment Count API
+
+resource "aws_apigatewayv2_integration" "lambda_increment_visitors" {
   api_id                 = aws_apigatewayv2_api.vistor-count-api.id
   integration_type       = "AWS_PROXY"
-  integration_uri        = aws_lambda_function.visitor-counter-function.invoke_arn
+  integration_uri        = aws_lambda_function.visitor-counter-increment.invoke_arn
   integration_method     = "POST"
   payload_format_version = "2.0"
 }
@@ -20,15 +34,19 @@ resource "aws_apigatewayv2_integration" "lambda_integration" {
 resource "aws_apigatewayv2_route" "increment" {
   api_id    = aws_apigatewayv2_api.vistor-count-api.id
   route_key = "GET /increment"
-  target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
+  target    = "integrations/${aws_apigatewayv2_integration.lambda_increment_visitors.id}"
+}
+
+resource "aws_lambda_permission" "apigw" {
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.visitor-counter-increment.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_apigatewayv2_api.vistor-count-api.execution_arn}/*/*"
 }
 
 
-
-
-
-
-
+### Get Count API
 
 resource "aws_apigatewayv2_integration" "lambda_get_visitors" {
   api_id                 = aws_apigatewayv2_api.vistor-count-api.id
@@ -59,21 +77,5 @@ resource "aws_lambda_permission" "apigw_get_count" {
 
 
 
-resource "aws_apigatewayv2_stage" "default" {
-  api_id      = aws_apigatewayv2_api.vistor-count-api.id
-  name        = "$default"
-  auto_deploy = true
-}
 
-resource "aws_lambda_permission" "apigw" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.visitor-counter-function.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_apigatewayv2_api.vistor-count-api.execution_arn}/*/*"
-}
 
-output "api_gateway_url" {
-  value       = aws_apigatewayv2_api.vistor-count-api.api_endpoint
-  description = "The invoke URL of the API Gateway"
-}

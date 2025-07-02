@@ -16,15 +16,38 @@ resource "aws_iam_role" "lambda_execution_role" {
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 }
 
-# Package the Lambda function code
 data "archive_file" "lambda_archive" {
   type        = "zip"
   source_file = "${path.module}/lambda/increment-count.py"
   output_path = "${path.module}/lambda/function.zip"
 }
 
-# Lambda function
-resource "aws_lambda_function" "visitor-counter-function" {
+resource "aws_iam_policy" "dynamodb_access" {
+  name        = "lambda-dynamodb-access"
+  description = "Allow Lambda to access DynamoDB visitor count table"
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "dynamodb:GetItem",
+          "dynamodb:UpdateItem"
+        ]
+        Resource = aws_dynamodb_table.dynodb-visitor-count.arn
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_dynamodb" {
+  role       = aws_iam_role.lambda_execution_role.name
+  policy_arn = aws_iam_policy.dynamodb_access.arn
+}
+
+# Lambda functions
+
+resource "aws_lambda_function" "visitor-counter-increment" {
   filename         = data.archive_file.lambda_archive.output_path
   function_name    = "increment-visitor-count"
   role             = aws_iam_role.lambda_execution_role.arn
@@ -70,25 +93,3 @@ resource "aws_lambda_function" "visitor-counter-get-count" {
   }
 }
 
-resource "aws_iam_policy" "dynamodb_access" {
-  name        = "lambda-dynamodb-access"
-  description = "Allow Lambda to access DynamoDB visitor count table"
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Action = [
-          "dynamodb:GetItem",
-          "dynamodb:UpdateItem"
-        ]
-        Resource = aws_dynamodb_table.dynodb-visitor-count.arn
-      }
-    ]
-  })
-}
-
-resource "aws_iam_role_policy_attachment" "lambda_dynamodb" {
-  role       = aws_iam_role.lambda_execution_role.name
-  policy_arn = aws_iam_policy.dynamodb_access.arn
-}
