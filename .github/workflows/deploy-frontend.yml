@@ -73,7 +73,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --baseURL "https://gagelara.com/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
 
       - name: Cache Save
