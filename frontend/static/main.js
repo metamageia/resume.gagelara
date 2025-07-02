@@ -1,6 +1,6 @@
 
-const apiUrlCount = 'https://3z3w4dxqm4.execute-api.us-east-2.amazonaws.com/count';
-const apiUrlIncrement = 'https://3z3w4dxqm4.execute-api.us-east-2.amazonaws.com/increment';
+const apiUrlCount = 'https://20fejhrl09.execute-api.us-east-2.amazonaws.com/count';
+const apiUrlIncrement = 'https://20fejhrl09.execute-api.us-east-2.amazonaws.com/increment';
 
 function hasVisited() {
   return document.cookie.split(';').some(cookie => cookie.trim().startsWith('visited='));
