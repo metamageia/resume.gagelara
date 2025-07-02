@@ -5,7 +5,7 @@ import boto3
 dynamodb = boto3.client("dynamodb")
 TABLE_NAME = os.environ["TABLE_NAME"]
 
-def handler(event, context):
+def increment(event, context):
     try:
         response = dynamodb.update_item(
             TableName=TABLE_NAME,
@@ -14,7 +14,20 @@ def handler(event, context):
             ExpressionAttributeValues={":inc": {"N": "1"}},
             ReturnValues="UPDATED_NEW"
         )
-        count = int(response["Attributes"]["visitor_count"]["N"])
+    except Exception as e:
+        return {
+            "statusCode": 500,
+            "headers": {"Content-Type": "application/json"},
+            "body": json.dumps({"error": str(e)})
+        }
+
+def get_count(event, context):
+    try:
+        response = dynamodb.get_item(
+            TableName=TABLE_NAME,
+            Key={"id": {"S": "main"}},
+        )
+        count = int(response["Item"]["visitor_count"]["N"])
         return {
             "statusCode": 200,
             "headers": {"Content-Type": "application/json"},

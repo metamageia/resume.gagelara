@@ -28,7 +28,30 @@ resource "aws_lambda_function" "visitor-counter-function" {
   filename         = data.archive_file.lambda_archive.output_path
   function_name    = "increment-visitor-count"
   role             = aws_iam_role.lambda_execution_role.arn
-  handler          = "increment-count.handler"
+  handler          = "increment-count.increment"
+  source_code_hash = data.archive_file.lambda_archive.output_base64sha256
+
+  runtime = "python3.13"
+
+  environment {
+    variables = {
+      ENVIRONMENT = "production"
+      LOG_LEVEL   = "info"
+      TABLE_NAME  = aws_dynamodb_table.dynodb-visitor-count.name
+    }
+  }
+
+  tags = {
+    Environment = "production"
+    Application = "visitor-counter"
+  }
+}
+
+resource "aws_lambda_function" "visitor-counter-get-count" {
+  filename         = data.archive_file.lambda_archive.output_path
+  function_name    = "get-visitor-count"
+  role             = aws_iam_role.lambda_execution_role.arn
+  handler          = "increment-count.get_count"
   source_code_hash = data.archive_file.lambda_archive.output_base64sha256
 
   runtime = "python3.13"
