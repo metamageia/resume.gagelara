@@ -6,9 +6,9 @@ disableKinds = ["taxonomy"]
     writeStats = true
 
 [params]
-    title = "Resume"
+    title = "Gage Lara Resume"
     author = "Gage Lara"
-    description = "My Resume"
+    description = "About Me:"
     copyright = "Check out my other links at:"
     theme = "dark" # `dark` or `light`
 
