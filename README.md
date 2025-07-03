@@ -24,7 +24,6 @@ This is the repo for my AWS-hosted resume website, created for the [Cloud Resume
   ├─ prod/ (Terraform configuration of AWS Resources)
   │   ├─ main.tf 
   │   ├─ modules.tf  
-  │   ├─  
   │   └─ modules/
   │      ├─ core/ (Core resources)
   │      └─ visitor-counter/ (API, DynamoDB, Lambda & Python files for visitor counter)
