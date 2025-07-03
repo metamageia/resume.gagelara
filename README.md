@@ -27,5 +27,5 @@ This is the repo for my AWS-hosted resume website, created for the [Cloud Resume
   │   └─ modules/
   │      ├─ core/ (Core resources)
   │      └─ visitor-counter/ (API, DynamoDB, Lambda & Python files for visitor counter)
-▸ flake.nix (Configures nix-shell with project-secific development resources)
+▸ flake.nix (Configures nix-shell with project-specific development resources)
 ```
