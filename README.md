@@ -10,5 +10,5 @@ This is the repo for my AWS-hosted resume website, created for the [Cloud Resume
 - Development Environment: NixOS, with a custom nix-shell.
 
 ## Architecture
-![Architecture Diagram][diagram.png]
+![Architecture Diagram](diagram.png)
 
