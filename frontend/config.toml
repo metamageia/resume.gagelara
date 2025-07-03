@@ -33,7 +33,7 @@ disableKinds = ["taxonomy"]
 		
         [[params.social.list]]
         icon = "bi bi-envelope-at-fill"		
-        url = "gageallenlara@gmail.com"
+        url = "mailto:gageallenlara@gmail.com"
         title = "Email"
 
     # Interests section
