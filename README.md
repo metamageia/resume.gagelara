@@ -12,3 +12,21 @@ This is the repo for my AWS-hosted resume website, created for the [Cloud Resume
 ## Architecture
 ![Architecture Diagram](diagram.png)
 
+
+```
+▸ .github/ 
+  └─ workflows/
+  │   ├─ deploy-frontend.yml (Build Website, Push Artifact to S3, Invalidate CloudFront Cache)
+  │   └─ deploy-infra.yml (Applys terraform configuration)
+▸ frontend/ (Website code, built from a modified Hugo theme)
+▸ infra/ 
+  ├─ bootstrap/ (Automated Deployment of the tfstate backend)
+  ├─ prod/ (Terraform configuration of AWS Resources)
+  │   ├─ main.tf 
+  │   ├─ modules.tf  
+  │   ├─  
+  │   └─ modules/
+  │      ├─ core/ (Core resources)
+  │      └─ visitor-counter/ (API, DynamoDB, Lambda & Python files for visitor counter)
+▸ flake.nix (Configures nix-shell with project-secific development resources)
+```
