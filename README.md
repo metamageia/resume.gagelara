@@ -1,6 +1,6 @@
 # The AWS Cloud Resume Challenge
 
-This is the repo for my AWS-hosted resume website, created for the [Cloud Resume Challenge](https://cloudresumechallenge.dev/). This project was created to demonstrate competency with fundamental skills in Cloud Engineering and DevOps practices. Check out my resume at [gagelara.com](https://gagelara.com)
+This is the repo for my AWS-hosted resume website, created for the [Cloud Resume Challenge](https://cloudresumechallenge.dev/). This project was created to demonstrate competency with fundamental skills in Cloud Engineering and DevOps practices. Check out my resume at [gagelara.com](https://gagelara.com) and read about my experience with the project [over on my blog](https://blog.gagelara.com/post/the-cloud-resume-challenge/).
 
 ## Tools & Services:
 - CI/CD: Github Actions.
