@@ -116,6 +116,14 @@ disableKinds = ["taxonomy"]
         skill = "Terraform"
         skillrating = 70
 
+    [params.badges]
+        title = "Badges"
+
+        [[params.badges.list]]
+        url = "https://www.credly.com/badges/c3c2da16-e40e-41dd-8cae-acc1f498dc35/public_url"
+        badge = "images/aws-educate-getting-started-with-networking.png"
+
+
 [deployment]
   [[deployment.targets]]
     name = 'production'

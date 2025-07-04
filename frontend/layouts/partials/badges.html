@@ -1,0 +1,10 @@
+<div class="px-3">
+  <h3>{{ .Site.Params.badges.title }}</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem;">
+    {{ range .Site.Params.badges.list }}
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" style="display: flex; justify-content: center; align-items: center;">
+        <img src="{{ .badge }}" alt="Badge" style="max-width: 100px; max-height: 100px; object-fit: contain;">
+      </a>
+    {{ end }}
+  </div>
+</div>
