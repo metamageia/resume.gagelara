@@ -121,7 +121,7 @@ disableKinds = ["taxonomy"]
 
         [[params.badges.list]]
         url = "https://catalog-education.oracle.com/ords/certview/sharebadge?id=62315E67B83EC02C9553BF40BD86AE5127818B8E1058A1C6A6F26AD4B4F60F5E"
-        badge = "images/OCI25FNDCFA/jpeg"
+        badge = "images/OCI25FNDCFA.png"
 
         [[params.badges.list]]
         url = "https://www.credly.com/badges/c3c2da16-e40e-41dd-8cae-acc1f498dc35/public_url"
