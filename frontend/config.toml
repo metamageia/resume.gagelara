@@ -37,6 +37,12 @@ disableKinds = ["taxonomy"]
         title = "Email"
 
     # Interests section
+    [params.skills]
+        title = "Skills"
+
+        [[params.skills.list]]
+        interest = "Linux, Nix/Os, AWS, Git Ops"
+		
     [params.hobbies]
         title = "Hobbies"
 
