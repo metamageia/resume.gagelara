@@ -41,7 +41,13 @@ disableKinds = ["taxonomy"]
         title = "Skills"
 
         [[params.skills.list]]
-        interest = "Linux, Nix/Os, AWS, Git Ops"
+        interest = "Linux, NixOs, AWS, GitOps"
+
+        [[params.skills.list]]
+        interest = "CI/CD, Terraform, Docker"
+
+        [[params.skills.list]]
+        interest = "HTML, CSS, Javascript, YAML"
 		
     [params.hobbies]
         title = "Hobbies"
@@ -50,7 +56,7 @@ disableKinds = ["taxonomy"]
         interest = "Music Production"
 		
 		[[params.hobbies.list]]
-        interest = "TTRPGs"
+        interest = "TTRPGs & Game Design"
 
         [[params.hobbies.list]]
         interest = "Firedancing"
