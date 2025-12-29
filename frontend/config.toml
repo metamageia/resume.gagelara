@@ -60,7 +60,17 @@ disableKinds = ["taxonomy"]
 
     # Experiences section
     [params.experiences]
-        title = "Other Experiences"
+        title = "Experience"
+
+        [[params.jobs.list]]
+        position = "Finishing Operator"
+        dates = "Nov 2025 - Present"
+        company = "BG Products"
+
+        [[params.jobs.list]]
+        position = "Production Operator"
+        dates = "Sept 2025 - Nov 2025"
+        company = "BG Products"
 
         [[params.jobs.list]]
         position = "Inventory Management Specialist"
@@ -82,6 +92,11 @@ disableKinds = ["taxonomy"]
         description = "Completed the Cloud Resume Challenge by developing a serverless static resume website on AWS, fully provisioned with Terraform, featuring a custom API and a Python Lambda function that updates a DynamoDB table to track the total number of website visitors."
 		
         [[params.projects.list]]
+        title = "Overlord: Javascript TTRPG Statblock Web App with PWA (JS, HTML, CSS)"
+        url = "https://github.com/metamageia/overlord"
+        description = "Overlord: A visual statblock library manager, creator, and editor for the Trespasser Tabletop RPG. This tool was made as a personal project for one of my favorite games while learning Javascript."
+
+        [[params.projects.list]]
         title = "Obsidian to Quartz GitOps Tutorial (GitOps)"
         url = "https://blog.gagelara.com/post/effortless-obsidian-to-quartz-cicd-for-beginners-with-github-actions/"
         description = "Developed a tutorial explaining how to build a streamlined GitOps pipeline for turning Obsidian markdown notes into Quartz static websites with a single click, with instructions on automatically building and deploying multiple websites simultaneously from within a single vault - both demonstrating and teaching effective CICD principles in a beginner-friendly fashion."
@@ -91,30 +106,6 @@ disableKinds = ["taxonomy"]
         url = "https://github.com/metamageia/NixOS-Personal"
         description = "Published and maintain my personal NixOS Configuration in a GitHub repository demonstrating my understand of NixOS, Linux, and Declarative workflows."
 
-        [[params.projects.list]]
-        title = "Overlord: Javascript TTRPG Statblock Web App with PWA (JS, HTML, CSS)"
-        url = "https://github.com/metamageia/overlord"
-        description = "Overlord: A visual statblock library manager, creator, and editor for the Trespasser Tabletop RPG. This tool was made as a personal project for one of my favorite games while learning Javascript."
-
-    # Skills section
-    [params.skills]
-        title = "Skills"
-
-        [[params.skills.list]]
-        skill = "NixOS"
-        skillrating = 95 # out of 100
-                
-        [[params.skills.list]]
-        skill = "GitOps"
-        skillrating = 90
-		
-        [[params.skills.list]]
-        skill = "Cloud: AWS & Digital Ocean"
-        skillrating = 80
-
-        [[params.skills.list]]
-        skill = "Terraform"
-        skillrating = 70
 
     [params.badges]
         title = "Certification and Badges"
