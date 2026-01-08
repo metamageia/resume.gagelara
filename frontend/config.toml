@@ -68,7 +68,7 @@ disableKinds = ["taxonomy"]
         interest = "Philosophy"
 
     [params.aboutme]
-        description = "I’m an aspiring DevOps and Cloud engineer who loves turning complex ideas into satisfyingly efficient, automated, and declarative solutions. In addition to completing the Cloud Resume Challenge I’ve built and maintained a NixOS-powered cloud homelab, created interactive JavaScript tools for Tabletop RPGs, and designed streamlined CI/CD workflows for turning local markdown notes into fully built and deployed websites with a single click."
+        description = "Tsurning complex ideas into satisfyingly efficient, automated, and declarative solutions. In addition to completing the Cloud Resume Challenge I’ve built and maintained a NixOS-powered cloud homelab, created interactive JavaScript tools for Tabletop RPGs, and designed streamlined CI/CD workflows for turning local markdown notes into fully built and deployed websites with a single click."
 
     # Experiences section
     [params.experiences]
