@@ -79,12 +79,17 @@ disableKinds = ["taxonomy"]
         title = "Experience"
 
         [[params.jobs.list]]
-        position = "Finishing Operator"
-        dates = "Nov 2025 - Present"
+        position = "Prepress Operator"
+        dates = "Feb 2026 - Present"
         company = "BG Products"
 
         [[params.jobs.list]]
-        position = "Production Operator"
+        position = "Finishing Operator"
+        dates = "Nov 2025 - Feb 2026"
+        company = "BG Products"
+
+        [[params.jobs.list]]
+        position = "Production Operator (Temp)"
         dates = "Sept 2025 - Nov 2025"
         company = "BG Products"
 
