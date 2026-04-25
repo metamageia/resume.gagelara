@@ -44,7 +44,7 @@ disableKinds = ["taxonomy"]
         interest = "Linux, NixOs, AWS, GitOps"
 
         [[params.skillset.list]]
-        interest = "Adobe Creative Cloud, Affinity Studio"
+        interest = "Adobe Creative Cloud, HP Print Production Pro"
 
         [[params.skillset.list]]
         interest = "CI/CD, Terraform, Docker"
